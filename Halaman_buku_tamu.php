@@ -28,7 +28,7 @@
             <?php
                 // session_start();
                 if(isset($_SESSION['upload_status'])){  ?>                                                   
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <div class="alert <?php if($_SESSION['upload_status']== 1) {echo 'alert-info';} else{echo 'alert-danger';}?>  alert-dismissible fade show" role="alert">
                             <?=$_SESSION['upload_message']  ?>
                             <!-- <strong>Berhasil!</strong> Data berhasil terupdate. -->
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
